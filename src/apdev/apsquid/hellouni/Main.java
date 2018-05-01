@@ -19,19 +19,22 @@ public class Main extends JavaPlugin{
 		
 		if(command.getName().toLowerCase().equals("hellouni")) {
 			
-			sender.sendMessage("Uni says Hello. Now Fuck Off.");
+	                sender.sendMessage("Uni says Hello. Now Fuck Off.");
+		}
 			
 		if(command.getName().toLowerCase().equals("helloccm")) {
 				
-				sender.sendMessage("Ccm says Hi. Now make your code formated.");
+			sender.sendMessage("Ccm says Hi. Now make your code formated.");
+		}
 				
 		if(command.getName().toLowerCase().equals("hellosquid")) {
 					
-					sender.sendMessage("Rawr.");
+			sender.sendMessage("Rawr.");
+		}
 					
 	}
 	
 	return false;
 	
 }
-}
+
