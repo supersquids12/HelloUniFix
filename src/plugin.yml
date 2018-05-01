@@ -1,0 +1,22 @@
+name: HelloUni
+main: apdev.apsquid.hellouni.Main
+version: 0.0.0.1
+author: supersquids12
+authors: [supersquids12, _MrUniverse]
+
+
+commands:
+  hellouni:
+    description: I wanted to say hi to Uni! I'm very lonely ;-;
+    usage: /hellouni
+    permission: hellouni.me
+  helloccm:
+    description: Say hi to your favourite Dev who loves formatting!
+    usage: /helloccm
+    permission: helloccm.me
+    
+  hellosquid:
+    description: Rawr
+    usage: /hellosquid
+    permission: hellosquid.me
+    
