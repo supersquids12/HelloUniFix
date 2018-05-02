@@ -22,36 +22,38 @@ public class Main extends JavaPlugin{
 		if(command.getName().toLowerCase().equals("hellouni")) {
 			
 			sender.sendMessage("Uni says Hello. Now Fuck Off.");
+			return true;
 		}	
 		if(command.getName().toLowerCase().equals("helloccm")) {
 				
-				sender.sendMessage("Ccm says Hi. Now make your code formated.");
-		}		
+			sender.sendMessage("Ccm says Hi. Now make your code formated.");
+		}	return true;
 		if(command.getName().toLowerCase().equals("hellosquid")) {
 					
-					sender.sendMessage("Rawr.");
+			sender.sendMessage("Rawr.");
+			return true;
 		}
 	    
         if(command.getName().toLowerCase().equals("hello")) {
 			
         	if (args[0].equalsIgnoreCase("spam")) {
         		for(int x = 0; x < 30; x++) {
-			        sender.sendMessage("Hello");
-        	    }
-        	}	
-        }
-        
-        ArrayList<String> responses = new ArrayList<String>();
-        responses.add("Rawr");
-        responses.add("Ccm says Hi. Now make your code formated.");
-        responses.add("Uni says hello. Now Fuck Off.");
-        
-        if(command.getName().toLowerCase().equals("hello")) {
-        	if (args[0].equalsIgnoreCase("random")) {
+				sender.sendMessage("Hello");
+        	    	}
+			return true;
+        	}
+		ArrayList<String> responses = new ArrayList<String>();
+        	responses.add("Rawr");
+        	responses.add("Ccm says Hi. Now make your code formated.");
+        	responses.add("Uni says hello. Now Fuck Off.");
+		
+		if (args[0].equalsIgnoreCase("random")) {
         		int min = 0, max = responses.size();
         		int randomNum = ThreadLocalRandom.current().nextInt(min, max);
-        		sender.sendMessage(responses.get(randomNum));	
+        		sender.sendMessage(responses.get(randomNum));
+			return true;
         	}
+	}
 			
 }
         
