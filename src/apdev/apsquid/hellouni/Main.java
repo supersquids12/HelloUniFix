@@ -53,6 +53,8 @@ public class Main extends JavaPlugin{
         		sender.sendMessage(responses.get(randomNum));
 			return true;
         	}
+		
+		send.sendMessage("Use either \'/hello spam\' or \'/hello random\'");
 	}
 			
 }
