@@ -37,7 +37,7 @@ public class Main extends JavaPlugin{
 		
         	if(command.getName().toLowerCase().equals("hello")) {
         	
-        		if (args.length < 2) {
+        		if (args.length < 1) {
     				sender.sendMessage("Use either \\'/hello spam\\' or \\'/hello random\\'");
     				return true;
         		}
@@ -50,7 +50,7 @@ public class Main extends JavaPlugin{
         		}
         		ArrayList<String> responses = new ArrayList<String>();
         		responses.add("Rawr");
-        		responses.add("Ccm says Hi. Now make your code formated.");
+        		responses.add("Ccm says Hi. Now make your code formatted.");
         		responses.add("Uni says hello. Now Fuck Off.");
 		
         		if (args[0].equalsIgnoreCase("random")) {
