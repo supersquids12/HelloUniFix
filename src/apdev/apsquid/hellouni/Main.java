@@ -27,15 +27,21 @@ public class Main extends JavaPlugin{
 		if(command.getName().toLowerCase().equals("helloccm")) {
 				
 			sender.sendMessage("Ccm says Hi. Now make your code formated.");
-		}	return true;
+			return true;
+		}
 		if(command.getName().toLowerCase().equals("hellosquid")) {
 					
 			sender.sendMessage("Rawr.");
 			return true;
 		}
-	    
+		
         if(command.getName().toLowerCase().equals("hello")) {
-			
+        	
+        	if (args.length < 2) {
+    			sender.sendMessage("Use either \\'/hello spam\\' or \\'/hello random\\'");
+    			return false;
+        	}
+        	
         	if (args[0].equalsIgnoreCase("spam")) {
         		for(int x = 0; x < 30; x++) {
 				sender.sendMessage("Hello");
@@ -48,18 +54,15 @@ public class Main extends JavaPlugin{
         	responses.add("Uni says hello. Now Fuck Off.");
 		
 		if (args[0].equalsIgnoreCase("random")) {
-        		int min = 0, max = responses.size();
-        		int randomNum = ThreadLocalRandom.current().nextInt(min, max);
-        		sender.sendMessage(responses.get(randomNum));
+			
+        	int min = 0, max = responses.size();
+        	int randomNum = ThreadLocalRandom.current().nextInt(min, max);
+        	sender.sendMessage(responses.get(randomNum));
 			return true;
         	}
-		
-		send.sendMessage("Use either \'/hello spam\' or \'/hello random\'");
+		sender.sendMessage("Use either \'/hello spam\' or \'/hello random\'");
+		return false;
 	}
-			
-}
-        
 	return false;
-	
 }
 }
