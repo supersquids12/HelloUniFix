@@ -39,7 +39,7 @@ public class Main extends JavaPlugin{
         	
         	if (args.length < 2) {
     			sender.sendMessage("Use either \\'/hello spam\\' or \\'/hello random\\'");
-    			return false;
+    			return true;
         	}
         	
         	if (args[0].equalsIgnoreCase("spam")) {
@@ -48,21 +48,21 @@ public class Main extends JavaPlugin{
         	    	}
 			return true;
         	}
-		ArrayList<String> responses = new ArrayList<String>();
+        	ArrayList<String> responses = new ArrayList<String>();
         	responses.add("Rawr");
         	responses.add("Ccm says Hi. Now make your code formated.");
         	responses.add("Uni says hello. Now Fuck Off.");
 		
-		if (args[0].equalsIgnoreCase("random")) {
+        	if (args[0].equalsIgnoreCase("random")) {
 			
-        	int min = 0, max = responses.size();
-        	int randomNum = ThreadLocalRandom.current().nextInt(min, max);
-        	sender.sendMessage(responses.get(randomNum));
+        		int min = 0, max = responses.size();
+        		int randomNum = ThreadLocalRandom.current().nextInt(min, max);
+        		sender.sendMessage(responses.get(randomNum));
+        		return true;
+        		}
+        	sender.sendMessage("Use either \'/hello spam\' or \'/hello random\'");
 			return true;
-        	}
-		sender.sendMessage("Use either \'/hello spam\' or \'/hello random\'");
-		return false;
+        }
+        return false;
 	}
-	return false;
-}
 }
